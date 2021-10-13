@@ -6,13 +6,13 @@
 [김지혜](https://github.com/asd3638)  
 
 ### ✨스터디 Member✨
-[고나미](https://github.com/{본인 깃헙 아이디})  
-[권은지](https://github.com/{본인 깃헙 아이디})  
-[김민지](https://github.com/{본인 깃헙 아이디})  
-[김서현](https://github.com/{본인 깃헙 아이디})  
-[김진영](https://github.com/{본인 깃헙 아이디})  
-[민휘](https://github.com/{본인 깃헙 아이디})  
-[윤지애](https://github.com/{본인 깃헙 아이디})  
+[고나미](https://github.com/asd3638)  
+[권은지](https://github.com/asd3638)  
+[김민지](https://github.com/asd3638)  
+[김서현](https://github.com/asd3638)  
+[김진영](https://github.com/asd3638)  
+[민휘](https://github.com/asd3638)  
+[윤지애](https://github.com/asd3638)  
 </br>
 
 
