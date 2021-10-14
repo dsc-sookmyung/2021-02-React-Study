@@ -1,17 +1,17 @@
 import { useState } from "react";
 
-export default function Hello() {
-    const [name, setName] = useState("고나미");
+export default function Hello(props) {
 
-    function changeName() {
-       const newName = name === "고나미"?"리액트 스터디 화이팅!":"고나미"
-        setName(newName);
-    }
-    
+    const [num, setNum] = useState(props.num);
+
     return (
-        <div>
-            <h1>{name}</h1>
-            <button onClick={changeName}>타이틀 바꾸기</button>
-        </div>
+        <div> 
+            <button
+             onClick={() => {
+                 setNum(num + 1);
+                 }}> + </button>
+            <button onClick={() => {setNum(num - 1);}}> - </button>
+            <h1>Count{num}</h1>
+        </div> 
     )
 }

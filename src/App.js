@@ -4,7 +4,7 @@ import Hello from './hello';
 
 function App() {
   return (
-    <Hello />
+    <Hello num ={0}/>
   );
 }
 
