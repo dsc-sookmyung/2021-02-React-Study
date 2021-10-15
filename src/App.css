@@ -50,3 +50,17 @@ body{
     transform: rotate(360deg);
   }
 }
+
+/* 3주차 리액트 */
+div{
+  padding: 10px;
+}
+
+button{
+  background: black;
+    color: white;
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+}
+
