@@ -6,7 +6,7 @@
 [김지혜](https://github.com/asd3638)  
 
 ### ✨스터디 Member✨
-[고나미](https://github.com/nami_koko)  
+[고나미](https://github.com/nami-koko)  
 [권은지](https://github.com/heleneunji)  
 [김민지](https://github.com/1914386)  
 [김서현](https://github.com/seohyun319)  
