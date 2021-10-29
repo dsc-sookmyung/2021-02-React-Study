@@ -1,10 +1,23 @@
-import './App.css';
 import React from 'react';
+import ShowPage from './a';
 import Hello from './hello';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
+
 
 function App() {
   return (
-    <Hello num ={0}/>
+    <BrowserRouter>
+    <Switch>
+      <Route exact path="/">
+        <Hello/>
+      </Route>
+      <Route path="/a">
+        <ShowPage/>
+      </Route>
+    </Switch>
+ 
+    </BrowserRouter>
+    
   );
 }
 
