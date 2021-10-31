@@ -20,11 +20,6 @@ code {
     monospace;
 }
 
-a {
-  text-decoration: none;
-  color: #333;
-}
-
 .App {
   width: 800px;
   margin: 0 auto;
