@@ -1,26 +1,29 @@
-import { useState } from "react";
-import Props from "./component/Props";
 import "./App.css";
+import Header from "./component/Header";
+import DayList from "./component/DayList";
+import Day from "./component/Day";
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import EmptyPage from "./component/EmptyPage";
 
 function App() {
 
-  let [num, setNum] = useState(0); // 변수 num의 초기값 = 0
-  
-  function increase() {
-    setNum(++num); // 먼저 연산 후 num 값 저장
-  }
-
-  function decrease() {
-    setNum(--num);
-  }
-
   return (
-    <div className="App">
-      <button onClick={ increase } className="btn">increase</button>
-      <button onClick={ decrease } className="btn">decrease</button>
-      {/* num 값을 Props 컴포넌트에 전달 */}
-      <Props num={num} />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+        <Switch>
+          <Route exact path="/">
+            <DayList />
+          </Route>
+          <Route path="/day/:day"> {/* 변수 day */}
+            <Day />
+          </Route>
+          <Route> {/* 어떤 조건도 만족하지 않을 때 */}
+            <EmptyPage />
+          </Route>
+        </Switch>
+      </div>
+    </BrowserRouter>
   );
 }
 
