@@ -1,9 +1,9 @@
+import React from "react";
 import "./App.css";
-import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
 import Router from "./component/Router";
 
 function App() {
-
   return (
     <BrowserRouter>
       <div className="App">
