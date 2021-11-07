@@ -1,7 +1,11 @@
-.btn {
-  font-size: 16px;
-  color: white;
-  background-color: black;
-  padding: 10px 50px 10px 50px;
-  border-radius: 10px;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+body {
+  font-family: "Noto Sans KR" !important;
+}
+
+.courses_tag {
+  color: #fa4c3d;
+  font-size: 12px;
+  font-weight: 700;
 }
