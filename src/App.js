@@ -1,21 +1,16 @@
-import Main from './component/Main';
-import Page2 from './component/Page2'
-import { BrowserRouter, Route, Switch} from 'react-router-dom'
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import NavBar from './component/NavBar'
+import SlideView from './component/SlideView';
+import RecentLecture from './component/RecentLecture'
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="App">
-        <Switch>
-            <Route exact path="/">
-              <Main/>
-            </Route>
-            <Route path="/a">
-              <Page2 />
-            </Route>
-          </Switch>
-      </div>
-    </BrowserRouter>
+    <div className="App">
+      <NavBar />
+      <SlideView />
+      <RecentLecture />
+    </div>
   );
 }
 
