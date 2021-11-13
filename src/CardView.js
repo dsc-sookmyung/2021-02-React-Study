@@ -7,7 +7,7 @@ import {
   ProgressBar,
   Container,
 } from "react-bootstrap";
-import "./CardView.css";
+import "./App.css";
 import { BsFillPlayFill } from "react-icons/bs";
 
 function CardView() {

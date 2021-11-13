@@ -7,7 +7,7 @@ import {
   FormControl,
 } from "react-bootstrap";
 import { BsSearch } from "react-icons/bs";
-import "./Header.css";
+import "./App.css";
 
 function Header() {
   return (
