@@ -1,23 +1,19 @@
-import React from 'react';
-import ShowPage from './a';
-import Hello from './hello';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
-
+import "./App.css";
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "./Header";
+import CardView from "./CardView";
+import { SlideView } from "./SlideView";
 
 function App() {
   return (
-    <BrowserRouter>
-    <Switch>
-      <Route exact path="/">
-        <Hello/>
-      </Route>
-      <Route path="/a">
-        <ShowPage/>
-      </Route>
-    </Switch>
- 
-    </BrowserRouter>
-    
+    <div>
+      <Header />
+
+      <loginButton />
+      <SlideView />
+      <CardView />
+    </div>
   );
 }
 
