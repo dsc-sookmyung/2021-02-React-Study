@@ -9,8 +9,6 @@ function App() {
   return (
     <div>
       <Header />
-
-      <loginButton />
       <SlideView />
       <CardView />
     </div>

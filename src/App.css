@@ -16,7 +16,7 @@
   width: 20%;
 }
 
-.signin {
+.join {
   background: #ff6d5a;
   margin-left: auto;
   color: white;
@@ -31,42 +31,24 @@
   flex-direction: column;
 }
 
-.card-bar {
-  display: flex;
-  align-items: baseline;
-  padding-top: 10px;
-}
-.card-bar p {
-  display: inline;
-  padding-right: 10px;
-}
-
 .card-title {
   font-weight: bold;
 }
 
-.cardbtn {
-  width: 30%;
-  background-color: #1fc078;
-  padding: 0;
-  font-size: 1.14em;
-  border: none;
-  color: white;
-}
-
-.card-progress {
-  width: 60%;
-  font-size: 0.7rem;
-}
-
-.progress {
-  height: 0.4rem;
-  margin-top: 10px;
-}
-.progress-bar {
-  background-color: #1fc078;
-}
-
 .card img {
   width: 40%;
+  align-self: flex-start;
+}
+
+.card-lecture {
+  display: flex;
+  align-self: baseline;
+}
+
+.card-progress .progress-bar {
+  background-color: #1dc078;
+}
+.card .cardbtn {
+  background-color: #1dc078;
+  border: none;
 }

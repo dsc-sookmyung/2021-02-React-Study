@@ -15,10 +15,13 @@ function CardView() {
     <Row>
       <Col>
         <Card>
-          <Card.Img variant="top" src="card1.png" />
+          <Card.Img
+            variant="top"
+            src="https://cdn.inflearn.com/wp-content/uploads/linux-1.jpg"
+          />
           <Card.Body>
             <Card.Title>생활코딩 - Linux</Card.Title>
-            <Container className="card-bar">
+            <Container className="card-lecture">
               <Container className="card-progress">
                 <Card.Text>기한 : 무제한 | 진도율 : 33.4%</Card.Text>
                 <ProgressBar now={33.4} />
@@ -34,12 +37,15 @@ function CardView() {
 
       <Col>
         <Card>
-          <Card.Img variant="top" src="card2.png" />
+          <Card.Img
+            variant="top"
+            src="https://cdn.inflearn.com/wp-content/uploads/django001.jpg"
+          />
           <Card.Body>
             <Card.Title>
               Django 초보 가이드 - 실습을 통해 알아보는 장고 입문
             </Card.Title>
-            <Container className="card-bar">
+            <Container className="card-lecture">
               <Container className="card-progress">
                 <Card.Text>기한 : 무제한 | 진도율 : 33.4%</Card.Text>
                 <ProgressBar now={82} />
