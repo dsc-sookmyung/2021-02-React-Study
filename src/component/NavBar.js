@@ -5,12 +5,26 @@ import logo from "../img/logo.png"
 import { Cart3, Bell } from "react-bootstrap-icons"
 import { useState } from "react";
 import { BrowserRouter, Link } from "react-router-dom";
+import { useRef } from "react";
+import axios from "axios";
 
 function NavBar(){
 	const [show, setShow] = useState(false);
 	
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
+
+	function onSubmit(){
+		axios.post(
+			"http://52.79.159.99:8080/api/login", 
+			{
+				id : idRef.current.value,
+				pw : pwRef.current.value
+			});
+	}
+
+	const idRef = useRef(null);
+	const pwRef = useRef(null);
 
   return(
 		<>
@@ -42,10 +56,10 @@ function NavBar(){
 				</Modal.Header>
 				<Modal.Body id="signin_window_body">
 					<Form>
-						<Form.Control type="text" placeholder="이메일 또는 아이디 입력"/>
-						<Form.Control type="password" placeholder="비밀번호"/>
+						<Form.Control type="text" placeholder="이메일 또는 아이디 입력" ref={idRef}/>
+						<Form.Control type="password" placeholder="비밀번호" ref={pwRef}/>
 					</Form>
-					<Button variant="success">로그인</Button>
+					<Button onClick={onSubmit} variant="success">로그인</Button>
 					<div class="modal-bottom">
 						<BrowserRouter>
 							<Link to="#">비밀번호 찾기</Link> |&nbsp;
