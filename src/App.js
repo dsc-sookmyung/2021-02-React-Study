@@ -1,12 +1,50 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Button, Container, Navbar, Nav, Form, FormControl, Card, Modal } from "react-bootstrap"
+import { Button, Container, Navbar, Nav, Form, FormControl, Card, Modal, Carousel } from "react-bootstrap";
+import axios from "axios";
 
 function App() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const [headers, setHeaders] = useState([]);
+  useEffect(() => {
+    axios.get("http://52.79.159.99:8080/api/header")
+      .then(function (response) {
+        setHeaders(response.data);
+      });
+  }, []);
+
+  const [slides, setSlides] = useState([]);
+  useEffect(() => {
+    axios.get("http://52.79.159.99:8080/api/slide")
+      .then(function(response) {
+        setSlides(response.data);
+      });
+  }, []);
+
+  const [id, setId] = useState("");
+  const [pw, setPw] = useState("");
+
+  const idChangeHandler = (e) => {
+    setId(e.currentTarget.value);
+  }
+
+  const pwChangeHandler = (e) => {
+    setPw(e.currentTarget.value);
+  }
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    axios.post("http://52.79.159.99:8080/api/login",
+    {
+      username: id,
+      password: pw
+    });
+    console.log("submit");
+  }
 
   return (
       <div className="App">
@@ -18,11 +56,9 @@ function App() {
               <img src="https://cdn.inflearn.com/public/files/pages/da35da48-52a5-4ec6-b8d3-0389a47610ec/logo1.png" width="100px" alt="logo" />
             </Navbar.Brand>
             <Nav className="me-auto">
-              <Nav.Link href="#">강의</Nav.Link>
-              <Nav.Link href="#">로드맵</Nav.Link>
-              <Nav.Link href="#">멘토링</Nav.Link>
-              <Nav.Link href="#">커뮤니티</Nav.Link>
-              <Nav.Link href="#">인프런</Nav.Link>
+              {headers.map(header => (
+                <Nav.Link href="#" key={header.id}>{header.header}</Nav.Link>
+              ))}
             </Nav>
             <Nav className="justify-content-end">
               <Form className="d-flex">
@@ -44,11 +80,11 @@ function App() {
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <Form>
-              <Form.Control type="email" placeholder="이메일 또는 아이디 입력" /> <br />
-              <Form.Control type="password" placeholder="비밀번호" /> <br />
+            <Form onSubmit={submitHandler}>
+              <Form.Control type="text" name="username" value={id} onChange={idChangeHandler} placeholder="이메일 또는 아이디 입력" /> <br />
+              <Form.Control type="password" name="password" value={pw} onChange={pwChangeHandler} placeholder="비밀번호" /> <br />
               <div className="d-grid gap-2">
-                <Button variant="success">로그인</Button> <br />
+                <Button variant="success" type="submit">로그인</Button> <br />
               </div>
               <p align="center">비밀번호 찾기 | 회원가입</p>
             </Form>
@@ -56,7 +92,19 @@ function App() {
         </Modal>
 
         {/* 배너 */}
-        <img src="https://storage.googleapis.com/static.fastcampus.co.kr/prod/uploads/202009/105721-239/zoom-%EC%88%98%EA%B0%95%EB%A3%8C-%EB%8C%80%ED%8F%AD%ED%95%A0%EC%9D%B8-%EB%9D%A0%EB%B0%B0%EB%84%88.png" width="100%" alt="banner" />
+        <Carousel>
+          {slides.map(slide => (
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src="https://cdn.inflearn.com/public/main_sliders/6d5647cc-afa4-40fd-b924-25ec9972f7ac/%5B%ED%81%90%EB%A0%88%EC%9D%B4%EC%85%98%5D%EB%8F%85%EC%84%9C%EC%9D%98%EA%B3%84%EC%A0%88_main_521.png"
+                alt="First slide"
+                height="300px"
+              />
+              <h4 className="slide_caption" key={slide.key}>{slide.slide}</h4>
+            </Carousel.Item>
+          ))}
+        </Carousel>
 
         {/* 강의 */}
         <Container style={{ marginTop: '2rem'}}>
