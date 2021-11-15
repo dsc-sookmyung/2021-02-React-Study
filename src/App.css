@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+body {
+  font-family: "Noto Sans KR" !important;
+}
+
+.courses_tag {
+  color: #fa4c3d;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.slide_caption {
+  position: absolute;
+  right: 15%;
+  bottom: 1.25rem;
+  left: 10%;
+  padding-bottom: 12rem;
+  color: black;
+}
