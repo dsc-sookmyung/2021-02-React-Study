@@ -1,9 +1,32 @@
-import React from 'react';
+import React, {useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Modal, Button, Form, Row, Col} from "react-bootstrap";
+import {Modal, Button, Form} from "react-bootstrap";
 import '../css/LoginModal.css';
+import axios from "axios";
 
 function LoginModal(props) {
+
+    const [id, setId] = useState("");
+    const [pw, setPw] = useState("");
+
+    const idChangeHandler = (e) => {
+        setId(e.currentTarget.value);
+    }
+
+    const pwChangeHandler = (e) => {
+        setPw(e.currentTarget.value);
+    }
+
+    const submitHandler = (e) => {
+        e.preventDefault();
+        axios.post("http://52.79.159.99:8080/api/login",
+        {
+          username: id,
+          password: pw
+        });
+        console.log("회원 가입 성공");
+      }
+
     return (
       <Modal
         {...props}
@@ -22,13 +45,13 @@ function LoginModal(props) {
                 />
             </div>
 
-            <Form className="loginForm">
+            <Form onSubmit={submitHandler} className="loginForm">
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Control type="email" placeholder="Enter email" />
+                    <Form.Control type="text" name="username" value={id} onChange={idChangeHandler} placeholder="Enter email" />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Control type="password" placeholder="Password" />
+                    <Form.Control type="password" name="password" value={pw} onChange={pwChangeHandler} placeholder="Password" />
                 </Form.Group>
                 <Button variant="primary" type="submit">
                     로그인

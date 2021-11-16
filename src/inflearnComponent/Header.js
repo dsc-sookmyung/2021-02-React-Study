@@ -1,13 +1,23 @@
-import React, {Component} from 'react';
+import React, {Component, useEffect, useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Navbar, Container, Nav, Form, FormControl, Button, InputGroup} from "react-bootstrap";
 import LoginModal from './LoginModal';
 import '../css/Header.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import axios from "axios";
 
 function Header(props){
-        const [modalShow, setModalShow] = React.useState(false);
+        const [modalShow, setModalShow] = useState(false);
+
+        const [headers, setHeaders] = useState([]);
+        useEffect(() => {
+            axios.get("http://52.79.159.99:8080/api/header")
+              .then(function (response) {
+                setHeaders(response.data);
+              });
+          }, []);
+
 		return (
             <div className="container">
             <Navbar>
@@ -24,11 +34,9 @@ function Header(props){
 
                 <div className="navbar-menu">
                     <div className="navbar-left">
-                        <Nav.Link href="#">강의</Nav.Link>
-                        <Nav.Link href="#">로드맵</Nav.Link>
-                        <Nav.Link href="#">멘토링</Nav.Link>
-                        <Nav.Link href="#">커뮤니티</Nav.Link>
-                        <Nav.Link href="#">인프런</Nav.Link>
+                    {headers.map(header => (
+                        <Nav.Link href="#" key={header.id}>{header.header}</Nav.Link>
+                    ))}
                     </div>
                     <div className="navbar-right">
                         
