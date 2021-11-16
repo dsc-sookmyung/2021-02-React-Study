@@ -1,0 +1,64 @@
+
+
+.card{
+    flex-direction: row;
+}
+
+.card-body{
+    flex-direction: column;
+    display: flex;
+    align-self: center;
+}
+
+img.card-img-top{
+    max-width: 35%;
+}
+
+.card-bottom{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+.card-bottom p{
+    display: inline;
+    padding-right: 10px;
+}
+.card-bottom p:nth-child(2){
+    padding-left: 10px;
+    border-left: 1px solid #222;
+}
+
+.card-title, h3.title{
+    font-weight: 700 !important;
+}
+
+.card_progress_cover{
+    width: 65%;
+    font-size: 0.8rem;
+    padding-bottom: 6px;
+}
+
+.progress{
+    height: 5px;
+    margin-top: 5px;
+}
+.progress-bar{
+    background-color: #1fc078;
+}
+
+.card_button_cover{
+    width: 30%;
+    padding-bottom: 0;
+}
+.card_button_cover .btn{
+    width: 100% !important;
+    background-color: #1fc078;
+    border: none;
+    padding: 0;
+    font-size: 1.1em;
+}
+
+.playIcon{
+    padding-left: 2px;
+}

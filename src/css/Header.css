@@ -1,0 +1,61 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+
+.header .btn{
+    padding: 0;
+    max-width: 15%;
+    border-color: #999;
+    border-width: 0.01px !important;
+    font-size: 0.8rem;
+    height: auto;
+    width: auto;
+    padding: 5px;
+}
+
+.login{
+    background-color: white;
+    color: #222;
+    margin-right: 10px;
+}
+.join{
+    background-color: coral;
+}
+
+a{
+    font-size: 0.8rem;
+    color: #222 !important;
+}
+
+.search input{
+    background-color: rgb(240, 240, 240) !important;
+    border: none;
+}
+
+.search span:after{
+    content: "";
+    font-family: "Font Awesome 5 Free";
+    font-size: 1.0em;
+}
+
+.navbar-menu, .navbar-left, .navbar-right{
+    display: flex;
+    align-items: center;
+}
+
+.navbar-menu{
+    width: 100%;
+    justify-content: space-between;
+}
+
+.mb-3.input-group{
+    width: 50%;
+    margin-bottom: 0 !important;
+}
+
+.navbar-right input{
+    border: 0;
+    background-color: #e9ecef;
+}
+.input-group-text{
+    border: 0;
+}

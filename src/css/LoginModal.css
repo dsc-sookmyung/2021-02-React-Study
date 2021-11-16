@@ -1,0 +1,63 @@
+.modal-header{
+    padding: 0;
+    border-bottom: 0;
+}
+.modal-content{
+    padding: 24px;
+}
+.modal-dialog{
+    width: 30%;
+}
+.modal-dialog .logoImg{
+    display: flex;
+}
+.logoImg img{
+    margin: 0px auto 24px;
+}
+.loginForm button{
+    width: 100%;
+    background-color: #1fc078;
+    border: none;
+}
+
+p.links{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+p.links span{
+    font-size: 0.8em;
+}
+p.links span:nth-child(1){
+    padding-right: 10px;
+    border-right: 1px solid gray;
+}
+p.links span:nth-child(2){
+    padding-left: 10px;
+}
+
+.modal-footer{
+    justify-content: center;
+    border: 0;
+}
+.modal-footer .simpleLogin{
+    font-size: 0.7em;
+    display: block;
+}
+
+.simpleLoginIcons{
+    display: flex;
+    justify-content: center;
+}
+.simpleLoginIcons img{
+    width: 50px;
+    padding-right: 10px;
+}
+
+.slContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
