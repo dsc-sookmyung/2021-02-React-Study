@@ -1,0 +1,74 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  /* min-height: 100vh; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /* font-size: calc(10px + 2vmin); */
+  color: white;
+}
+
+.Slides {
+  background-color: grey;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.Navbar-logo {
+  float: left;
+  margin-top: -5px;
+}
+
+.navbar-brand {
+  font-size: smaller;
+  margin: auto;
+}
+
+.search.input-group {
+  width: 20%;
+}
+
+.join {
+  background: #ff6d5a;
+  margin-left: auto;
+  color: white;
+}
+
+.card {
+  flex-direction: row;
+  align-items: center;
+}
+
+.card-body {
+  flex-direction: column;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.card img {
+  width: 40%;
+  align-self: flex-start;
+}
+
+.card-lecture {
+  display: flex;
+  align-self: baseline;
+}
+
+.card-progress .progress-bar {
+  background-color: #1dc078;
+}
+.card .cardbtn {
+  background-color: #1dc078;
+  border: none;
+}
