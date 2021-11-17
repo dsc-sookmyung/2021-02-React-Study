@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import axios from "axios";
+import Header from "./Header";
 
 const header = axios.create({
   baseURL: "http://52.79.159.99:8080/api/header",

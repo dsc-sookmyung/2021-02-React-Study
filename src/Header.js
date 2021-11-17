@@ -10,9 +10,20 @@ import {
 } from "react-bootstrap";
 import { BsSearch } from "react-icons/bs";
 import "./App.css";
+import axios from "axios";
 
 function Header() {
   const [modalOpen, setModalOpen] = useState(false);
+
+  const loginHandler = (e) => {
+    e.preventDefault();
+    axios.post("http://52.79.159.99:8080/api/login"),
+      {
+        username: inputId,
+        password: inputPw,
+      };
+  };
+
   // const modalOpen = () => setPage(true);
   // const modalClose = () => setPage(false);
 
@@ -57,8 +68,12 @@ function Header() {
       <Modal show={modalOpen} onHide={() => setModalOpen(false)}>
         <Modal.Header closeButton />
         <Modal.Body>
-          <FormControl type="email" placeholder="이메일 혹은 아이디 입력" />
-          <FormControl type="password" placeholder="비밀번호" />
+          <FormControl
+            type="email"
+            value={inputId}
+            placeholder="이메일 혹은 아이디 입력"
+          />
+          <FormControl type="password" value={inputPw} placeholder="비밀번호" />
           <Button variant="success">로그인</Button>
         </Modal.Body>
       </Modal>
