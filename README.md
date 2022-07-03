@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# 2021-02-React-Study
+[2021 GDSC Sookmyung 2기] 1분기 스터디(web_front React)를 위한 저장소입니다.
+</br>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 📚스터디 진행방식📚
 
-## Available Scripts
+## 과제
+- 과제 마감 : **매주 일요일 12:00 PM까지**  
+- 과제 /스터디 공지 : **매주 월요일 21:00 PM까지**
 
-In the project directory, you can run:
+### 과제 제출 방법
+과제는 해당 레포지토리에 PR을 보낸 후 커밋하며 쌓아가는 형식으로 제출합니다. 
+매 주 다음과 같이 제출하면 됩니다.
+첫 PR 제목은 : [본인 이름] 2021 GDSC React Study
+커밋명은 : 배운 내용 요약
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 출석 
+- **출석** : 과제 마감 기간 안에 과제 PR  
+- **지각** : 과제 마감 기한 이후 48시간 이내 PR  
+- **결석** : 미제출
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+## 기술 블로그 작성
+- 각 주차 주제별 기술 블로그 작성
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 주차별 기술 블로그 작성자 순서
+**김서현 -  권은지 - 민휘 -  윤지애 -  고나미 -  김민지 - 김진영 - 김지혜**  
 
-### `npm run build`
+| 주차 | 주제 |작성자 | 기술블로그 |
+|:----------:|:----------:|:----------:|:----------:|
+| 2주차 | event | 김서현 | <ul><li>- [x] </li></ul> |
+| 2주차 | useState | 권은지 | <ul><li>- [x] </li></ul> |
+| 3주차 | component | 민휘 | <ul><li>- [x] </li></ul> |
+| 3주차 | props | 윤지애 | <ul><li>- [x] </li></ul> |
+| 4주차 | react-router-dom | 고나미 | <ul><li>- [x] </li></ul> |
+| 5주차 | react-bootstrap | 김민지 | <ul><li>- [x] </li></ul> |
+| 6주차 | axios로 서버와 http 통신하기 | 김진영 | <ul><li>- [x] </li></ul> |
+<br/>
+</br>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 기술 블로그  
+[GDSC Sookmyung 기술 블로그 React](https://dsc-sookmyung.tistory.com/category/Group%20Study%20%282021-2022%29/React)  
+### Notion  
+[GDSC Sookmyung 노션 페이지 React](https://www.notion.so/1-React-ad9f133158844dc8ab1a77317413db46)
